@@ -1,0 +1,21 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sunrise" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE7C2" />
+      <stop offset="100%" stop-color="#FDF6EC" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD27F" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="700" rx="60" fill="url(#sunrise)" />
+  <circle cx="700" cy="150" r="120" fill="#FFDFA6" opacity="0.6" />
+  <path d="M180 520H720V620H180V520Z" fill="#5C1A1B" />
+  <path d="M260 520V430H640V520H260Z" fill="#6B2325" />
+  <path d="M330 430V360H570V430H330Z" fill="#7A2C2E" />
+  <path d="M400 360V300H500V360H400Z" fill="#8B3436" />
+  <path d="M450 300L470 270L490 300H450Z" fill="url(#gold)" />
+  <path d="M310 520V470H360V520H310Z" fill="#FDF6EC" opacity="0.8" />
+  <path d="M540 520V470H590V520H540Z" fill="#FDF6EC" opacity="0.8" />
+</svg>

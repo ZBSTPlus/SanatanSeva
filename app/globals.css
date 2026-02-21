@@ -1,26 +1,118 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --saffron: #ff9933;
+  --maroon: #5c1a1b;
+  --cream: #fdf6ec;
+  --gold: #d4af37;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--maroon);
+  font-family: var(--font-body), sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-heading), serif;
+}
+
+.btn-golden {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--maroon);
+  background: linear-gradient(135deg, #ffe7b8, #ffd17a);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  box-shadow: 0 12px 28px rgba(212, 175, 55, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-golden:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(212, 175, 55, 0.6);
+}
+
+.hero-sunrise {
+  background: radial-gradient(circle at top, #ffe7c2, transparent 55%),
+    linear-gradient(180deg, #fff4df 0%, #fdf6ec 45%, #f6e7cf 100%);
+}
+
+.floating-particles span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(212, 175, 55, 0.55);
+  animation: float 8s ease-in-out infinite;
+}
+
+.floating-particles span:nth-child(2) {
+  width: 8px;
+  height: 8px;
+  animation-delay: 1.5s;
+}
+
+.floating-particles span:nth-child(3) {
+  width: 5px;
+  height: 5px;
+  animation-delay: 2.5s;
+}
+
+.floating-particles span:nth-child(4) {
+  width: 7px;
+  height: 7px;
+  animation-delay: 3.5s;
+}
+
+.floating-particles span:nth-child(5) {
+  width: 4px;
+  height: 4px;
+  animation-delay: 4.5s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-16px);
+    opacity: 0.9;
+  }
+}
+
+.diya {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd17a 0%, rgba(255, 153, 51, 0.1) 70%);
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.7);
+  animation: diyaGlow 3s ease-in-out infinite;
+}
+
+@keyframes diyaGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 28px rgba(212, 175, 55, 0.6);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(212, 175, 55, 0.9);
+    transform: scale(1.05);
+  }
 }
