@@ -4,8 +4,9 @@ import SevaCard from "../../components/SevaCard";
 import { getTempleBySlug } from "../../data/temples";
 import { notFound } from "next/navigation";
 
-export default function TempleDetailPage({ params }) {
-  const temple = getTempleBySlug(params.slug);
+export default async function TempleDetailPage({ params }) {
+  const { slug } = await params;
+  const temple = getTempleBySlug(slug);
 
   if (!temple) {
     notFound();

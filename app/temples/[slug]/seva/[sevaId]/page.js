@@ -3,9 +3,10 @@ import SevaBookingForm from "../../../../components/SevaBookingForm";
 import { getSevaById, getTempleBySlug } from "../../../../data/temples";
 import { notFound } from "next/navigation";
 
-export default function SevaBookingPage({ params }) {
-  const temple = getTempleBySlug(params.slug);
-  const seva = getSevaById(temple, params.sevaId);
+export default async function SevaBookingPage({ params }) {
+  const { slug, sevaId } = await params;
+  const temple = getTempleBySlug(slug);
+  const seva = getSevaById(temple, sevaId);
 
   if (!temple || !seva) {
     notFound();
